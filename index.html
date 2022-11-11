@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Bai tap</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-form">
+            <div class="form-actions">
+                <form action="" method="post" onsubmit="return onclick_check()">
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="" id="first-name" class="form-control" value="the">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="" id="last-name" class="form-control" value="3">
+                        </div>
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="patient-age">Patient Age <span>*</span></label>
+                        <input type="number" class="form-control" id="patient-age" value="23">
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="">Prefered Name / Nickname</label>
+                        <input type="text" class="form-control" id="nick-name" value="ngoc the">
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="patient-gender">Patient Gender <span>*</span></label>
+                        <select name="" id="patient-gender" class="form-control">
+                            <option value="">- Select -</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <span id="gender-error" class="gender-error"></span>
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="phone">Phone no.<span>*</span></label>
+                        <input type="tel" class="form-control" id="phone-no" value="0968899196">
+                        <span id="phone-error"></span>
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="">Spouce Name</label>
+                        <input type="text" class="form-control" id="spouce-name" value="no">
+                    </div><!-- .form-group-->
+
+                    <div class="form-group form-radio">
+                        <label for="">Marital Status<span>*</span></label>
+                        <div class="form-content" id="form-radio-married">
+                            <div class="form-radio-item">
+                                <input type="radio" name="marital" id="married" onclick="radio_fuc()" value="married"
+                                    class="form-control" checked>
+                                <label for="married">Married</label>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="marital" id="unmarried" onclick="radio_fuc()"
+                                    value="unmarried" class="form-control">
+                                <label for="unmarried">Unmarried</label>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="marital" id="other" onclick="radio_fuc()" value="other"
+                                    class="form-control">
+                                <label for="other">other</label>
+                            </div>
+                        </div>
+                    </div><!-- .form-group-->
+
+                    <div class="form-group" id="form-group-orther">
+                        <label for="">Marital status(other)<span>*</span></label>
+                        <input type="text" class="form-control" id="marital-oth" value="12">
+                    </div><!-- .form-group-->
+
+                    <div class="form-group" id="form-group-date">
+                        <label for="">Date of retirement<span>*</span></label>
+                        <input type="date" class="form-control" id="date-t">
+                    </div><!-- .form-group-->
+
+                    <div class="form-group">
+                        <label for="">Email<span>*</span></label>
+                        <input type="email" class="form-control" id="email" value="ngocthecntt@gmail.com">
+                        <span id="email-error"></span>
+                    </div><!-- .form-group-->
+
+                    <div class="form-group form-submit">
+                        <input type="submit" value="Submit Form" class="form-submit-control btn-primary"
+                            onclick="return  onclick_check()">
+                    </div>
+
+
+                </form>
+
+            </div><!-- .form-actions-->
+        </div>
+        <table id="result-kq" class="result-kq">
+            <button class="btn-filter" id="btn-filter" onclick="filter_click()">filter</button>
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Patient Age</td>
+                    <td>Prefered Name / Nickname</td>
+                    <td>Patient Gender</td>
+                    <td>Phone no.</td>
+                    <td>Spouce Name</td>
+                    <td>Marital Status</td>
+                    <td>Marital status(other)</td>
+                    <td>Date of disability</td>
+                    <td>Email</td>
+                    <td>Create at</td>
+                    <td>Edit</td>
+                </tr>
+            </thead>
+            <tbody id="result-kq_bd">
+            </tbody>
+        </table>
+    </div><!-- .content-->
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
